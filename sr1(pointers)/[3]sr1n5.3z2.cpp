@@ -11,18 +11,27 @@ int main()
 {
     setlocale(0, "RUS");
     srand(time(0));
-    const int N = 15;
+    int N;   
+    cout << "Введите размер массива: ";
+    cin >> N;
+    double* a = new double[N];
     const int* pN(&N);
-    int a[N] = { 0 };
-    int* pa = a;
-    int min = 0, k = 0, t = 1, ty = 1;
-    int* pmin(&min), * pk(&k), * pt(&t);
+    double* pa = a;
+    float min = 0.0, k = 0.0, t = 1.0, ty = 1.0, g = 0.0, f = 0.0, b = 0.0;
+    float* pmin(&min), * pk(&k), * pt(&t);
+    cout << endl;
     // 2.1
     for (int i = 0; i < *pN; i++)
     {
-        pa[i] = rand() % 20 - 15;
+        g= rand() % 9;
+        f = g /10 ;
+        b = rand() % 20 - 15;
+        pa[i] = b + f;
         cout << "|" << "a[" << i << "]=" << pa[i] << endl;
     }
+    cout << endl;
+    system("pause");
+    cout << endl;
     //2.2
     for (int i = 0; i < *pN; i++)
     {
@@ -30,20 +39,25 @@ int main()
         if (pa[i] > 0 && (*pk == 1 || pa[i] < *pmin)) *pmin = pa[i]; //минимальный из положительных
     }
     cout << "Минимальный моложительный элемент массива: " << *pmin << endl;
+    cout << endl;
+    system("pause");
+    cout << endl;
     //2.3
-
     for (int i = 0; i < *pN; i++)
     {
-        if (pa[i] > 0 || pa[i] < 0)
+        if (pa[i] > 0.0 || pa[i] < 0.0)
         {
             t *= pa[i]; 
-            cout << t << endl;//отладочный ( ПРОВЕРКА )
+            //cout << t << endl;//отладочный ( ПРОВЕРКА )
         }
     }
     cout << "Произведение ненулевых элементов массива: " << *pt << endl;
+    cout << endl;
+    system("pause");
+    cout << endl;
     //2.4
     cout << "Вывести ненулевые элементы на экран в обратном порядке: " << endl;
-    for (int i = 14; i > 0; i--)
+    for (int i =*pN; i > 0; i--)
     {
         if (pa[i] > 0 || pa[i] < 0) 
         {
