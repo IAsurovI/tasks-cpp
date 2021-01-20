@@ -34,14 +34,14 @@ int main()
         if (pa[i] > 0) k++; //положительные элементы
         if (pa[i] > 0 && (*pk == 1 || pa[i] < *pmin)) *pmin = pa[i]; //минимальный из положительных
     }
-    cout << "Минимальный моложительный элемент массива: " << *pmin << endl;
+    cout << "Минимальный положительный элемент массива: " << *pmin << endl;
     cout << endl;
     system("pause");
     cout << endl;
     //7.3
     for (int i = 0; i < *pN; i++)
     {
-        if (pa[i] > 0.0 && pa[i]%3==0)
+        if (pa[i] > 0.0 && pa[i] % 3 == 0)
         {
             t += pa[i];
             //cout << t << endl;//отладочный ( ПРОВЕРКА )
@@ -53,7 +53,7 @@ int main()
     cout << endl;
     //7.4
     cout << "Ненулевые элементы массива: " << endl;
-    for (int i = 0; i <*pN; i++)
+    for (int i = 0; i < *pN; i++)
     {
         if (pa[i] > 0 || pa[i] < 0)
         {
