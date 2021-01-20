@@ -23,29 +23,37 @@ int main()
         pa[i] = rand() % 20 - 15;
         cout << "|" << "a[" << i << "]=" << pa[i] << endl;
     }
+    cout << endl;
+    system("pause");
+    cout << endl;
     //2.2
     for (int i = 0; i < *pN; i++)
     {
         if (pa[i] > 0) k++; //положительные элементы
         if (pa[i] > 0 && (*pk == 1 || pa[i] < *pmin)) *pmin = pa[i]; //минимальный из положительных
     }
-    cout << "Минимальный моложительный элемент массива: " << *pmin << endl;
+    cout << "Минимальный положительный элемент массива: " << *pmin << endl;
     //2.3
-
+    cout << endl;
+    system("pause");
+    cout << endl;
     for (int i = 0; i < *pN; i++)
     {
         if (pa[i] > 0 || pa[i] < 0)
         {
-            t *= pa[i]; // доделай :)
-            cout << t << endl;//отладочный ( ПРОВЕРКА )
+            t *= pa[i]; 
+            //cout << t << endl;//отладочный ( ПРОВЕРКА )
         }
     }
     cout << "Произведение ненулевых элементов массива: " << *pt << endl;
     //2.4
+    cout << endl;
+    system("pause");
+    cout << endl;
     cout << "Вывести ненулевые элементы на экран в обратном порядке: " << endl;
     for (int i = 14; i > 0; i--)
     {
-        if (pa[i] > 0 || pa[i] < 0) 
+        if (pa[i] > 0 || pa[i] < 0)
         {
             cout << "|" << "a[" << i << "]=" << pa[i] << endl;
         }
