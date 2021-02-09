@@ -13,6 +13,7 @@ int main()
 	int i = 0;
 	int o = 0;
 	cout << "Введите число в двоичном коде: " << endl;
+	tryAgain:
 	cin.getline(str, MAX, '\n');
 	cout << "OTLADKA: vvedeno " << strlen(str) << " simvolov" << endl;
 	o = strlen(str);
@@ -30,6 +31,9 @@ int main()
 		}
 		cout << "Введённое число в десятичной системе: " << des << endl;
 	}
-	else cout << "Вы ввели неверное число. " << endl;
-	
+	else
+	{
+		cout << "Вы ввели неверное число. Повторите попытку: ";
+		goto tryAgain;
+	}
 }
