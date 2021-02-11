@@ -1,0 +1,50 @@
+
+
+//№3Заданы две строки. Построить новую строку, состоящую из символов, которые входят в первую строку, но не входят во вторую.
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "RUS");
+    const int MAX = 1000;
+    char str1[MAX] = "";
+    char str2[MAX] = "";
+    char str3[MAX] = "";
+    char vrem[MAX] = "";
+
+    cout << "Введите первую строку: ";
+    cin.getline(str1, MAX, '\n');
+    cout << endl;
+    cout << "Введите вторую строку: ";
+    cin.getline(str2, MAX, '\n');
+    cout << endl;
+
+    int a = strlen(str1), b = strlen(str2);
+    int c = a + b;
+
+    for (int j = 0; j < c; j++)
+    {
+        for (int i = 0; i < a; i++)
+        {
+            for (int k = 0; k < b; k++)
+            {
+                if (str1[i] != str2[k])
+                {
+                    vrem[j] = str1[i];
+                }
+                else
+                {
+                    vrem[j] = 0;
+                    break;
+                }
+            }
+            str3[j] = vrem[j];
+            if (str3[j] != 0)j++;
+        }
+    }
+
+    cout << "Результат: " << str3 << endl;
+
+}
