@@ -1,0 +1,20 @@
+//// №2 В заданной строке заменить каждую русскую букву символом «*»
+//#include <iostream>
+//using namespace std;
+//int main()
+//{
+//	setlocale(LC_ALL, "RUS");
+//	unsigned char str[] = "Текст на русском i anglijskom";
+//	int i = 0;
+//	cout << str << endl;
+//	while (str[i] != '\0') 
+//	{
+//		if (str[i] > 192 && str[i] < 255)
+//		{
+//			str[i] = '*';
+//		}
+//			cout << str[i];
+//		i++;
+//	}
+//	cout << endl;
+//}
