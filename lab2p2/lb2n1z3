@@ -1,0 +1,17 @@
+//№1 В заданной строке вместо первого символа поставить пробел, а вместо последнего – точку.
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//int main()
+//{
+//	setlocale(0, "RUS");
+//	const int MAX = 1000;
+//	char str[MAX] = "";
+//	int o = 0;
+//	cout << "Введите строку: ";
+//	cin.getline(str, '\n');
+//	o = strlen(str);
+//	str[0] = ' ';
+//	str[o-1] = '.';
+//	cout << str << endl;
+//}
