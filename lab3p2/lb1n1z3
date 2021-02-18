@@ -1,0 +1,31 @@
+//№1Рассчитать значение z = max(a, 2b) + max(2a - b, b) определив и использовав функцию max(x, y) – максимальное из двух чисел
+#include <iostream>
+using namespace std;
+double max(double x, double y);
+int main()
+{
+	setlocale(0, "RUS");
+	double a, b, z;
+	cout << "Введите число a: ";
+	cin >> a;
+	cout << "Введите число b: ";
+	cin >> b;
+	z = max(a, 2 * b) + max(2 * a - b, b);
+	cout << "z = " << z;
+	double x, y;
+	x = a;
+	y = b;
+}
+double max(double x, double y)
+{
+	double m;
+	if (x >= y)
+	{
+		m = x;
+	}
+	else
+	{
+		m = y;
+	}
+	return m;
+}
