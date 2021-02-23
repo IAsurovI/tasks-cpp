@@ -1,0 +1,19 @@
+////#1Дано натуральне число n. За допомогою рекурсії виведіть всі числа від 1 до n.
+//#include <iostream>
+//using namespace std;
+//void func(int n);
+//
+//int main()
+//{ 
+//    setlocale(0, "RUS");
+//    cout << "До какого числа?: ";
+//    int x;
+//    cin >> x;
+//    func(x);
+//    }
+//void func(int n)
+//{
+//    if (n > 1)
+//        func(n - 1);
+//    cout << n <<endl;
+//}
