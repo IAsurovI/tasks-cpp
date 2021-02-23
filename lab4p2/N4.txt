@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sum(int n);
+int func(int n);
 
 int main()
 {
@@ -10,14 +10,14 @@ int main()
     int a;
     cout << "Введите число: ";
     cin >> a;
-    cout << "Сумма цифр числа " <<a<<" = "<< sum(a) << endl;
+    cout << "Сумма цифр числа " << a << " = " << func(a) << endl;
 }
 
-int sum(int n)
+int func(int n)
 {
     if (n < 10) return n;
     else
     {
-        return n % 10 + sum(n / 10);
+        return n % 10 + func(n / 10);
     }
 }
