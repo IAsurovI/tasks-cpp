@@ -1,0 +1,32 @@
+//#2 Дано два цілих числа A і В (кожне в окремому рядку). За допомогою рекурсії виведіть всі 
+//числа від А до B включно, в порядку зростання, якщо A < B, або в порядку убування в іншому випадку.
+
+#include <iostream>
+using namespace std;
+void func(int n, int m);
+
+int main()
+{
+    setlocale(0, "RUS");
+    cout << "Введите А: ";
+    int a;
+    cin >> a;
+    cout << "Введите В: ";
+    int b;
+    cin >> b;
+    func(a, b);
+}
+void func(int n, int m)
+{
+    if (n < m)
+    {
+        cout << n << endl;
+        func(n + 1, m);
+    }
+    else if (n > m)
+    {func(n, m + 1);
+        cout << m << endl;
+        
+    }
+
+}

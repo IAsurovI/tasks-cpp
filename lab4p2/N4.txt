@@ -1,0 +1,23 @@
+#include <iostream> 
+
+using namespace std;
+
+int sum(int n);
+
+int main()
+{
+    setlocale(0, "RUS");
+    int a;
+    cout << "Введите число: ";
+    cin >> a;
+    cout << "Сумма цифр числа " <<a<<" = "<< sum(a) << endl;
+}
+
+int sum(int n)
+{
+    if (n < 10) return n;
+    else
+    {
+        return n % 10 + sum(n / 10);
+    }
+}
