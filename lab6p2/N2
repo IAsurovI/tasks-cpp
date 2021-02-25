@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+	srand(time(0));
 	setlocale(0, "RUS");
 	int N, M, L;
 	cout << "Введите N: ";
@@ -57,10 +58,15 @@ int main()
 	{
 		for (int j = 0; j < L; j++)
 		{
+			A[i][j] = 0;
 			for (int k = 0; k < M; k++)
-				A[i][j] = B[i][k] * C[k][j];
-			cout << A[i][j] << '\t';
+			{
+				A[i][j] += B[i][k] * C[k][j];
+			}cout << A[i][j] << '\t';
 		}
 		cout << endl;
 	}
+	delete[] B;
+	delete[] A;
+	delete[] C;
 }
