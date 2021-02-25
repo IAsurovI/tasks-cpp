@@ -1,0 +1,66 @@
+//Задані дві матриці дійсних чисел A (N, M) і B (N, M). Обчислити матрицю C = A + B
+#include <iostream>
+#include <ctime>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "RUS");
+	int N, M, L;
+	cout << "Введите N: ";
+	cin >> N;
+	cout << "Введите M: ";
+	cin >> M;
+	cout << "Введите L: ";
+	cin >> L;
+
+	cout << endl;
+	int** B = new int* [N];
+	for (int i = 0; i < N; i++)
+		B[i] = new int[M];
+	cout << "Матрица B:" << endl;
+	cout << endl;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < M; j++)
+		{
+			B[i][j] = rand() % 25;
+			cout << B[i][j] << '\t';
+		}
+		cout << endl;
+	}
+
+	cout << endl;
+	int** C = new int* [M];
+	for (int i = 0; i < M; i++)
+		C[i] = new int[L];
+	cout << "Матрица С:" << endl;
+	cout << endl;
+	for (int i = 0; i < M; i++)
+	{
+		for (int j = 0; j < L; j++)
+		{
+			C[i][j] = rand() % 25;
+			cout << C[i][j] << '\t';
+		}
+		cout << endl;
+	}
+	cout << endl;
+
+	int** A = new int* [N];
+	for (int i = 0; i < N; i++)
+		A[i] = new int[L];
+	cout << "Умножение двух матриц: " << endl;
+	cout << endl;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < L; j++)
+		{
+			for (int k = 0; k < M; k++)
+				A[i][j] = B[i][k] * C[k][j];
+			cout << A[i][j] << '\t';
+		}
+		cout << endl;
+	}
+}
