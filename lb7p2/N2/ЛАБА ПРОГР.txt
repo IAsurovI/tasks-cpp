@@ -1,0 +1,119 @@
+//Файл состоит из k компонент структуры, где каждая компонента содержит две матрицы: первая размерности m x n, вторая размерности m x l.
+//Получить k произведений соответствующих матриц и записать их во второй файл. Вывести на экран содержимое первого и второго файлов.
+#include <iostream>
+#include <fstream>
+#include <ctime>
+using namespace std;
+int main()
+{
+	setlocale(0, "RUS");
+	int r = 0;
+	int sch = 0;
+	int vrem = 0;
+	int sum = 0;
+	srand(time(0));
+	tryagain:
+	cout << "ОТЛАДКА: Количество структур. " << endl;
+	cout << "Введите k: ";
+	int k;
+	cin >> k;
+	cout << "ОТЛАДКА: Количество строк в матрицах. " << endl;
+	cout << "Введите m: ";//Кол-во строк в матр
+	int m;
+	cin >> m;
+	cout << "ОТЛАДКА: Количество столбцов в 1 матрице. " << endl;
+	cout << "Введите n: ";// столбцы в 1 матр
+	int n;
+	cin >> n;
+	cout << "ОТЛАДКА: Количество столбцов в 2 матрице. " << endl;
+	cout << "Введите l: ";//столбцы в 2 матр
+	int l;
+	cin >> l;
+
+	if (m == n)
+	{
+		ofstream f;//Запись матриц в первый файл
+		f.open("D:\\lb\\one.txt", ios::out);
+		for (int z = 0; z < k; z++) {
+			for (int i = 0; i < m; i++)
+			{
+				f << endl;
+				for (int j = 0; j < n; j++)
+				{
+					f << rand() % 25 << '\t';
+				}
+			}
+			f << endl;
+
+			for (int i = 0; i < m; i++)
+			{
+				f << endl;
+				for (int j = 0; j < l; j++)
+				{
+					f << rand() % 25 << '\t';
+				}
+			}
+			f << endl;
+		}
+		f.close();//Конец записи матриц в первый файл
+		sum = m * n + n * l;
+		int q = 0;
+		int aa = 0;
+		int bb = 0;
+		int cc = 0;
+		cout << "Вывод содержимого первого файла: " << endl;
+		ifstream ff;//Начало чтения первого файла и его вывод
+		ofstream gg;
+		ff.open("D:\\lb\\one.txt", ios::in);
+		gg.open("D:\\lb\\two.txt", ios::out);
+		if (ff)
+		{
+			for (int i = 0; i < sum; i++)
+				while (!ff.eof())
+				{
+					ff >> vrem;
+					cout << vrem << endl;
+					sch++;
+					for (int p = 0; p < k; p++) {
+
+						
+						for (int j = aa; j < n * m; j++)
+						{gg << '\n';
+							for (int c = bb; c < n * l; c++)
+							{
+								ff >> vrem;
+								q += vrem * vrem;
+								gg << q << '\t';
+								
+							}
+							gg << '\n';
+						}
+						aa = n * m;
+						bb = n * l;
+					}
+				}
+		}
+		gg.close();
+		cout << sch - 1;
+		ff.close();//Конец чтения и вывода из первого файла
+		sch = 0;
+		cout << "Содержимое второго файла: " << endl;
+		ifstream ga;
+		ga.open("D:\\lb\\two.txt", ios::in);
+		while (!ga.eof())
+		{
+			ga >> vrem;
+			cout << vrem << endl;
+			sch++;
+		}
+
+		ga.close();
+
+	}
+	else {
+		cout << "Количество столбцов матрицы А должно быть равно количеству строк матрицы В!" << endl;
+		cout << "Повторите попытку. " << endl;
+		goto tryagain;
+	}
+}
+

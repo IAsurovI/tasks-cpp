@@ -1,0 +1,82 @@
+//«Студент»: фамилия; имя; отчество; пол; национальность; рост; вес; дата рождения (год, месяц число); номер телефона; домашний адрес(почтовый индекс,
+//страна, область, район, город, улица, дом, квартира); ВУЗ; курс; группа; средний бал; специальность.Вывести сведения про всех студентов у которых средний балл ниже 70 баллов.
+#include <iostream>
+#include <fstream>
+using namespace std;
+struct student{
+	char Surname[80];
+	char name[30];
+	char patronymic[50];
+	char gender[10];
+	int height;
+	int weight;
+	int year;
+	char month[30];
+	int day;
+	char phone[20];
+	char index[10];
+	char country[30];
+	char region[60];
+	char area[60];
+	char city[60];
+	char street[60];
+	int house;
+	int apartment;
+	char university[120];
+	int course;
+	int group;
+	int SCORE;
+	char cpecialty[100];
+
+};
+int main()
+{
+	setlocale(0, "RUS");
+	ifstream f;
+	f.open("D:\\lb05032021Progr\\STUDENT.txt");
+	char r[1];
+	int s = 0;
+	int n;
+	n = 1;
+	f.getline(r, 1, '\n');
+	student* St = new student[n];
+	while (f.eof())
+	{
+		f.getline(St[s].Surname, 80, '\n');
+		f.getline(St[s].name, 30, '\n');
+		f.getline(St[s].patronymic, 50, '\n');
+		f.getline(St[s].gender, 10, '\n');
+		f.getline(St[s].patronymic, 50, '\n');
+		f >> St[s].height;
+		f >> St[s].weight;
+		f >> St[s].year;
+		f.getline(St[s].month, 30, '\n');
+		f >> St[s].day;
+		f.getline(St[s].phone, 20, '\n');
+		f.getline(St[s].index, 10, '\n');
+		f.getline(St[s].country, 30, '\n');
+		f.getline(St[s].region, 60, '\n');
+		f.getline(St[s].area, 60, '\n');
+		f.getline(St[s].city, 60, '\n');
+		f.getline(St[s].street, 60, '\n');
+		f >> St[s].house;
+		f >> St[s].apartment;
+		f.getline(St[s].university, 120, '\n');
+		f >> St[s].course;
+		f >> St[s].group;
+		f >> St[s].SCORE;
+		f.getline(St[s].cpecialty, 100, '\n');
+		s++;
+	}
+	f.close();
+	int sum = 0;
+	for (int i = 0; i < n; i++)
+	{
+		sum += St[i].SCORE;
+	}
+	for(int i=0;i<n;i++)
+	{
+		if (St[i].SCORE > sum / n)
+			cout << St[i].Surname;
+	}
+}
