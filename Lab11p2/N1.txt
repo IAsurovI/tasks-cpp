@@ -1,0 +1,14 @@
+//#include "pch.h"
+//using namespace System;
+//int main(array<String^>^ args)
+//{
+//    Console::WriteLine(L"Введите стоимоcть ");
+//    double c=Double::Parse(Console::ReadLine());
+//    Console::WriteLine(L"Введите продолжительность ");
+//   int a=Int32::Parse(Console::ReadLine());
+//   Console::WriteLine(L"Введите день ");
+//   int day = Int32::Parse(Console::ReadLine());
+//    c *= a;
+//    if (day == 6 || day == 7)c -= c * 0.2;
+//    Console::WriteLine(c);
+//}

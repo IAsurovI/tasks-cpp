@@ -1,0 +1,41 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    setlocale(0, "RUS");
+    stack<int> st;
+    int result=0;
+    char c;
+    bool a = 1;
+    cout << "Ввод: ";
+    do {
+        while (c = cin.peek(), c == ' ' || c == '\t') cin.get();
+        if (c == '\n' || c == '=') {
+            a = 0;
+            break;
+            /*cin.get();*/
+        }
+        else {
+            int t;
+            cin >> t;
+            if (cin.fail()) {
+                int a, b;
+                b = st.top();
+                st.pop();
+                a = st.top();
+                st.pop();
+                if (c == '+')result = a + b;
+                else if (c == '-')result = a - b;
+                else if (c == '*')result = a * b;
+                else if (c == '/')result = a / b;
+                st.push(result);
+                cin.clear();
+                if (c = cin.peek(), c != '\n' && c != '=') cin.get();
+            }
+            else
+                st.push(t);
+        }
+    } while (a);
+    cout << "Результат:" << st.top() << endl;
+}

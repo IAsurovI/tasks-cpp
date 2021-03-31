@@ -1,0 +1,15 @@
+//В заданной строке заменить каждый пробел двумя пробелами
+#include "pch.h"
+#include <string>
+using namespace System;
+
+int main(array<String^>^ args)
+{
+ 
+    char str[50] = "This line have most spaces";
+    int i, j;
+    for (i = 0, j = 0; str[i]; ++i)
+        if (str[i] != ' ') str[j++] = str[i];
+    str[j] = 0;
+    puts(str);
+}

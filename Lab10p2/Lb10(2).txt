@@ -1,0 +1,45 @@
+////Ввести целочисленный массив, состоящий из 17-ти элементов (двузначные целые числа). Вычислить сумму цифр этого массива
+//#include <iostream>
+//#include <vector>
+//#include <ctime>
+//using namespace std;
+//int main() {
+//	srand(time(0));
+//	setlocale(0, "RUS");
+//	int data[17];
+//	int sum = 0;
+//	vector<int>mydata(17);
+//	cout << "Введенный масив: " << endl;
+//	for (int i=0; i < 17; i++) {
+//		cout << "[" << i << "]= ";
+//		data[i]=rand ()%10+80;
+//		mydata[i] = data[i];
+//		sum += mydata[i];
+//		cout << "data[" << i << "]=" << mydata[i] << endl;
+//	}
+//	cout << "Сумма: " << sum << endl;
+//}
+#include <iostream>
+#include <vector>
+#include <ctime>
+using namespace std;
+int main() {
+	setlocale(0, "RUS");
+	vector<int>mydata;
+	int buffer = 0;
+	int sch = 0;
+	int sum = 0;
+	cout << "Чтобы остановить ввод чисел, введите 0" << endl;
+	cout << "Вводите двузначные числа:" << endl;
+	do{
+		cout << "["<<sch<<"]= ";
+		cin >> buffer;
+		mydata.push_back(buffer);
+		sch++;
+	} while (buffer != 0);
+	for (int i = 0; i < sch; i++)
+	{
+		sum += mydata[i];
+	}
+	cout << "Cумма: " << sum << endl;
+}
