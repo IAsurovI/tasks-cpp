@@ -13,3 +13,28 @@ int main(array<String^>^ args)
     str[j] = 0;
     puts(str);
 }
+
+
+
+
+#include"pch.h"
+#include <string>
+#include <algorithm>
+using namespace System;
+
+int main() {
+	String^ str("privet vasa drugek privet");
+	int length = 0;
+	length = str->Length;
+	/*std::replace(str[0], str[length], ' ', '_');*/
+	char index[50]="0";
+	for (int i = 0; i < length; i++)if (str[i] == ' '){
+		index[i] = i; Console::WriteLine(index[i]);
+}
+	for (int i = 0; i < length; i++) {
+		int a = index[i];
+		Console::WriteLine(a);
+		if (index[i] > 0)str[i] <-'  ';
+	}
+	Console::WriteLine(str);
+}
