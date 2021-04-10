@@ -1,0 +1,33 @@
+//#include <iostream>
+//using namespace std;
+//struct detsad
+//{
+//	string PIB;
+//	string zrist;
+//	string vaga;
+//	string batko;
+//};
+//int main() {
+//	setlocale(0, "RUS");
+//	const int t = 3;
+//	detsad det[t];
+//	for (int i = 0; i < t; i++) {
+//		cout << endl;
+//		cout << "Введiть ПIБ " << i << " дитини: ";
+//		cin >> det[i].PIB;
+//		cout << "Введiть зрiст " << i << " дитини: ";
+//		cin >> det[i].zrist;
+//		cout << "Введiть вагу " << i << " дитини: ";
+//		cin >> det[i].vaga;
+//		cout << "Введiть iм'я батька " << i << " дитини: ";
+//		cin >> det[i].batko;
+//	}
+//	cout << "Введiть iм'я батька: ";
+//	string bat;
+//	cin >> bat;
+//	for (int i = 0; i < t; i++) {
+//		if (det[i].batko == bat) {
+//			cout << det[i].PIB[0] << det[i].PIB[1] << "ся" << endl;
+//		}
+//	}
+//}
