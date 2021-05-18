@@ -1,0 +1,16 @@
+﻿  MyForm.cpp
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(231,15): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(236,15): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(246,24): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(247,24): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(259,32): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(259,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(259,56): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(259,51): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(265,32): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(265,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(265,57): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(265,52): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.cpp(7,32): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Lab14p2.vcxproj -> C:\Users\Asurov\source\repos\Lab14p2\Debug\Lab14p2.exe

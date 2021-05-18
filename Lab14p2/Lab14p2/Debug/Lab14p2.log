@@ -1,0 +1,22 @@
+﻿  MyForm.cpp
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(326,15): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(331,15): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(336,15): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(346,24): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(347,24): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(348,24): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(360,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(360,26): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(360,56): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(360,51): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(366,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(366,26): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(366,56): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(366,51): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(378,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(378,26): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(378,56): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.h(378,51): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Asurov\source\repos\Lab14p2\Lab14p2\MyForm.cpp(7,32): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Lab14p2.vcxproj -> C:\Users\Asurov\source\repos\Lab14p2\Debug\Lab14p2.exe
