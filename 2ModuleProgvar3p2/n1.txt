@@ -1,0 +1,72 @@
+//Создать стек строковых значений, для реализации используя односвязные списки. Реализовать операции добавления (push) и удаления (pop)
+//элемента из стека. Добавьте в стек строки «abc», «fx», «glc», «hi», «gogo» и распечатайте содержимое стека. Удалите один элемент из
+//стека, затем добавьте строку «the end» и распечатайте содержимое стека еще раз. Найдите количество строк в стеке, состоящих из 2 символов.
+
+#include <iostream>
+using namespace std;
+int numberofthewords = 0;
+struct Node {
+    string d;        
+    Node* p;       
+};
+Node* first(int d);            
+void push(Node** top, string d);  
+string pop(Node** top);         
+int marker = 0;
+int main() {
+    setlocale(0, "RUS");
+    Node* top = NULL;         
+    top = first(1);            
+    string mass[6] = {"abc","fx", "glc", "hi", "gogo"};
+    for (int i = 1; i < 6; i++)push(&top, mass[i]); 
+    cout << '\n';
+    int r = 0;
+    while (top)           
+    {                     
+        srand(time(0));
+        r++;
+        int temp = 0;
+    random: temp = rand() % 5;
+        int a = 0;
+        if (temp != 0)  a = temp;
+        else goto random;
+
+        if (r != a)cout << pop(&top) << ' '; 
+        else {
+            marker = 1;
+            pop(&top);
+        }
+    }
+    push(&top, "the end");
+    cout << '\n';     
+    cout << "Количество строк, состоящих из двух символов: " << numberofthewords << endl;
+}
+Node* first(int d) {
+    Node* pv = new Node;  
+    pv->d = "abc";         
+    pv->p = 0;      
+    cout << pv->d << ' ';  
+    return pv;       
+}
+
+void push(Node** top, string d) {
+    Node* pv = new Node;        
+    pv->d = d;                
+    pv->p = *top;              
+    *top = pv;                
+    cout << (*top)->d << ' ';    
+}
+
+string pop(Node** top) {
+    string temp = (*top)->d;     
+    if (temp.length() == 2)
+    {
+        if (marker != 1)numberofthewords++;
+        else marker=0;
+    }
+    else marker = 0;
+    Node* pv = *top;         
+    (*top) = (*top)->p;          
+    delete pv;             
+    return temp;         
+}

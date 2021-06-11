@@ -1,0 +1,120 @@
+
+#include <iostream>
+#include <list>
+using namespace std;
+int main()
+{
+    srand(time(0));
+    setlocale(0, "RUS");
+    std::list <int> list;
+    for (int i = 0; i < 15; i++) {
+        int var = rand() % 20+10;
+        list.push_back(var);
+        cout << var << " ";
+    }
+    cout << endl;
+    int r = 0;
+    while (!list.empty()) {
+        if (list.front() < 15&&r==0) { 
+            r = 1;
+            list.pop_front();
+        }
+        else {
+            cout << list.front()<<" ";
+            list.pop_front();
+        }
+    }
+}
+
+
+//#include <iostream>
+//#include <list>
+//using namespace std;
+//int main()
+//{
+//    srand(time(0));
+//    setlocale(0, "RUS");
+//    std::list <int> mylist;
+//    for (int i = 0; i < 15; i++) {
+//        int var = rand() % 20 + 10;
+//        mylist.push_back(var);
+//        cout << var << " ";
+//    }
+//    cout << endl;
+//    int r = 0;
+//    while (!mylist.empty()) {
+//        if (mylist.front() < 15 && r == 0) {
+//            r = 1;
+//            mylist.pop_front();
+//        }
+//        else {
+//            cout << mylist.front() << " ";
+//            mylist.pop_front();
+//        }
+//    }
+//}
+
+
+
+#include <iostream>
+using namespace std;
+struct Node {
+    int d;
+    Node* p;
+};
+Node* first(int d);
+void push(Node** top, int d);
+int pop(Node** top);
+int marker = 0;
+int main() {
+    srand(time(0));
+    setlocale(0, "RUS");
+    Node* top = NULL;
+    top = first(1);
+    int mass[20] = {};
+    for (int i = 0; i < 20; i++) {
+        mass[i] = rand() % 20 + 10;
+    }
+    for (int i = 1; i < 20; i++)push(&top, mass[i]);
+    cout << '\n';
+ while (top)
+    {
+      /*cout << pop(&top) << ' ';*/
+     pop(&top);
+    }
+    cout << '\n';
+}
+Node* first(int d) {
+    Node* pv = new Node;
+    pv->d = 18;
+    pv->p = 0;
+    cout << pv->d << ' ';
+    return pv;
+}
+
+
+void push(Node** top, int d) {
+    Node* pv = new Node;
+    pv->d = d;
+    pv->p = *top;
+    *top = pv;
+    cout << (*top)->d << ' ';
+}
+
+int pop(Node** top) {
+    int temp = (*top)->d;
+    if (temp < 15 && marker == 0) {
+        marker = 1;
+        Node* pv = *top;
+        (*top) = (*top)->p;
+        delete pv;
+        return 0;
+    }
+    else {
+        Node* pv = *top;
+        (*top) = (*top)->p;
+        delete pv;
+        cout << temp << ' ';
+        return temp;
+    }
+}
