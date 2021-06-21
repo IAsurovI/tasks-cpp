@@ -1,0 +1,12 @@
+E:\Lab18p2\lab18p2\x64\Debug\lab18p2.vcxprojAssemblyReference.cache
+E:\Lab18p2\lab18p2\x64\Debug\lab18p2.MyForm.resources
+E:\Lab18p2\lab18p2\x64\Debug\lab18p2.vcxproj.GenerateResource.cache
+F:\Lab18p2\lab18p2\x64\Debug\lab18p2.vcxprojAssemblyReference.cache
+F:\Lab18p2\lab18p2\x64\Debug\lab18p2.MyForm.resources
+F:\Lab18p2\lab18p2\x64\Debug\lab18p2.vcxproj.GenerateResource.cache
+F:\Lab18p2\lab18p2\x64\Debug\lab18p2.MyForm1.resources
+F:\Lab18p2\lab18p2\x64\Debug\lab18p2.MyForm2.resources
+F:\Lab18p2\lab18p2\x64\Debug\lab18p2.MyForm3.resources
+E:\Lab18p2\lab18p2\x64\Debug\lab18p2.MyForm1.resources
+E:\Lab18p2\lab18p2\x64\Debug\lab18p2.MyForm2.resources
+E:\Lab18p2\lab18p2\x64\Debug\lab18p2.MyForm3.resources

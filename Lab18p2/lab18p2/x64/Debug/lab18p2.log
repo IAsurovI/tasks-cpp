@@ -1,0 +1,5 @@
+﻿  MyForm.cpp
+F:\Lab18p2\lab18p2\MyForm.h(638,15): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
+F:\Lab18p2\lab18p2\MyForm.cpp(7,32): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  lab18p2.vcxproj -> F:\Lab18p2\x64\Debug\lab18p2.exe
